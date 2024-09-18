@@ -1,7 +1,16 @@
 <?php
-$kendaraan 	= array('Mobil', 'Motor', 'Sepeda');
-$upper 		= array_map('toupper', $kendaraan);
-function toupper($array_val) {
-	return strtoupper($array_val);
+function nama_bulan($bulan, $callback) {
+	$list_bulan = array (1 => 'Januari', 2 => 'Februari', 3 => 'Maret');
+	$nama = $list_bulan[$bulan];
+	
+	if (is_callable($callback)) {
+		return $callback($nama);
+	}
+	return $nama;
 }
-echo '<pre>'; print_r($upper);
+
+$bulan = nama_bulan(2, function($val) {
+		return strtoupper($val);
+	});
+echo $bulan; // Hasil: FEBRUARI
+
