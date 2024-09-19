@@ -1,23 +1,19 @@
-<html lang="en">
- 
-<head>
-    <title>Method POST</title>
-</head>
- 
+html>
 <body>
-    <form action="" method="POST">
-        <input type="text" name="nama"><br />
-        <input type="number" name="umur"><br />
-        <input type="submit" name="submit" value="Sumbit">
-    </form>
- 
-    <?php
-    if ($_POST) {
-        echo "Nama:putri " . $_POST["nama"];
-        echo "<br/>";
-        echo "Umur: 16" . $_POST["umur"];
-    }
-    ?>
+	<form method="POST" action="">
+		<input type="text" name="nama"><br>
+		<input type="text" name="email"><br>
+		<input type="submit" name="submit" value="submit">
+	</form>
+
+	<?php
+	if ($_POST)
+	{
+		echo 'Nama: putri' . $_POST['nama'];
+		echo '<br>';
+		echo 'Email: putrinayla2020@gmail.com' . $_POST['email'];
+	}
+	?>
 </body>
- 
 </html>
+
