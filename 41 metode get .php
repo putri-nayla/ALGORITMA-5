@@ -1,23 +1,18 @@
-<html lang="en">
- 
-<head>
-    <title>Method GET</title>
-</head>
- 
+<html>
 <body>
-    <form action="" method="GET">
-        <input type="text" name="nama"><br />
-        <input type="number" name="umur"><br />
-        <input type="submit" name="submit" value="Sumbit">
-    </form>
- 
-    <?php
-    if ($_GET) {
-        echo "Nama: " . $_GET["nama"];
-        echo "<br/>";
-        echo "Umur: " . $_GET["umur"];
-    }
-    ?>
+	<form method="GET" action="">
+		<input type="text" name="nama"><br>
+		<input type="text" name="email"><br>
+		<input type="submit" name="submit" value="Submit">
+	</form>
+	
+	<?php
+	if ($_GET)
+	{
+		echo 'Nama: ' . $_GET['nama'];
+		echo '<br>';
+		echo 'Email: ' . $_GET['email'];
+	}
+	?>
 </body>
- 
 </html>
